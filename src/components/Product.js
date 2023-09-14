@@ -11,7 +11,7 @@ const Product = ({ product }) => {
     <div>
       <div>
         <div>
-            <Link to={`/product/${id}`} className="">
+            <Link to={`/product/${id}`}>
                 <img src={image} alt="" width="150"/>
             </Link> 
         </div>
@@ -19,7 +19,7 @@ const Product = ({ product }) => {
           <h4>{title}</h4>
           <img src={image} width="200px" alt=""></img>
         </Link>
-        <h2>$ {price}</h2>
+        <h2 className="text-3xl font-bold underline">$ {price}</h2>
         <button>Add to cart</button>
         </div>
     </div>
