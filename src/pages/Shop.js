@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { ProductContext } from "../contexts/ProductContext";
-import ProductCard from "../components/ProductCard";
+import ProductItem from "../components/ProductItem";
 
 export default function Shop() {
 
@@ -13,7 +13,7 @@ export default function Shop() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 lg:mx-8 gap-[30px] max-w-sm mx-auto md:max-w-none md:mx-0">
           {products.map((product) => {
             return (
-              <ProductCard product={product} key={product.id}/>
+              <ProductItem product={product} key={product.id}/>
             );
           })}    
         </div>
