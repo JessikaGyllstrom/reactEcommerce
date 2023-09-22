@@ -14,7 +14,7 @@ const Button = ({ product, id }) => {
   return (
     <button
       className={`${effect && "animate-bgAnimate"} 
-      inline-flex items-center min-w-[60%] overflow-hidden text-white bg-gray-800 rounded-md group border border-white border-rounded-xl hover:border-purple-800`}
+      inline-flex items-center min-w-[100%] overflow-hidden text-white bg-gray-800 rounded-md group border border-white border-rounded-xl hover:border-purple-800`}
       onClick={() => {
         addToCart(product, id)
         //start animation
@@ -29,7 +29,7 @@ const Button = ({ product, id }) => {
       <span className={"px-3.5 py-3 text-white flex  bg-purple-600 "}>
         <HiOutlineShoppingBag className="text-xl hover:text-gray-800" />
       </span>
-      <span className="w-full text-sm items-center align-middle pl-4 pr-5">{btnText}</span>
+      <span className="w-full text-md items-center align-middle pl-4 pr-5">{btnText}</span>
     </button>
   );
 };

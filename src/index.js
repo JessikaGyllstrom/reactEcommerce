@@ -5,16 +5,24 @@ import App from './App';
 import ProductProvider from './contexts/ProductContext';
 import ToggleProvider from './contexts/ToggleContext';
 import CartProvider from './contexts/CartContext';
+import SearchContextProvider from './contexts/SearchContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ToggleProvider>
-    <CartProvider>
-      <ProductProvider>
-        <React.StrictMode>
-          <App />
-        </React.StrictMode>
-      </ProductProvider>
-    </CartProvider>
+  <React.StrictMode>
+    <ToggleProvider>
+      <CartProvider>
+        <ProductProvider>
+          <SearchContextProvider>
+
+            <App />
+
+                  </SearchContextProvider>
+                  </ProductProvider>
+
+      </CartProvider>
+      
   </ToggleProvider>
+           </React.StrictMode>
+
 );

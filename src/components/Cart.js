@@ -14,16 +14,16 @@ function Cart() {
         isOpen ? "right-0" : "-right-full"
       } "w-full bg-white fixed top-0 h-full shadow-xl z-20 px-4"`}
     >
-    <div className="flex items-center justify-between py-6 border-b border-slate-900 mb-2">
+    <div className="flex items-center justify-between py-6 px-5 border-b border-slate-900 mb-2">
       <div className="uppercase w-full align-center flex justify-center text-xl font-semibold">Shopping Cart</div>
         <AiOutlineClose className="text-2xl" onClick={toggleClose}/>
       </div>
-      <div className="flex flex-col h-screen gap-y-2  overflow-y-auto overflow-x-hidden border-b">
-        {cart.map((item) => {
-          return <CartItem item={item} key={item.id} />;
+      <div className="flex flex-col h-screen gap-y-2 px-5 overflow-y-auto overflow-x-hidden border-b">
+        {cart.map((item, idx) => {
+          return <CartItem item={item} key={idx} />;
         })}
         {/* subtotal */}
-        <div className="font-semibold">
+        <div className="font-semibold self-end">
           {/* limit the number of decimals to two */}
           <span className="mr-2 text-slate-950">Subtotal:</span> ${subTotal.toFixed(2)}
         </div>

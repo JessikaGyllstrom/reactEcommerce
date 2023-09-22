@@ -10,7 +10,7 @@ const ToggleProvider = ({children}) => {
     setIsOpen(false)
     console.log('set "is open" to false')
   }
-  
+                          
   return <ToggleContext.Provider value={{isOpen, setIsOpen, toggleClose}}>{children}</ToggleContext.Provider>;
 };
 
