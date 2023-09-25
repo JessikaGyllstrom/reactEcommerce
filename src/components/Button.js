@@ -7,14 +7,14 @@ import { HiOutlineShoppingBag } from "react-icons/hi";
 const Button = ({ product, id }) => {
   const { addToCart } = useContext(CartContext);
   // state to toggle button text
-  const [btnText, setBtnText] = useState("Add to Cart");
+  const [btnText, setBtnText] = useState("Buy Now");
   // state to toggle animation
   const [effect, setEffect] = useState(false);
 
   return (
     <button
       className={`${effect && "animate-bgAnimate"} 
-      inline-flex items-center min-w-[100%] overflow-hidden text-white bg-gray-800 rounded-md group border border-white border-rounded-xl hover:border-purple-800`}
+      inline-flex items-center min-w-[100%] overflow-hidden text-white bg-gray-800 group border border-white rounded-md hover:border-purple-800`}
       onClick={() => {
         addToCart(product, id)
         //start animation
@@ -23,13 +23,13 @@ const Button = ({ product, id }) => {
         setBtnText("\u2713")
       }}
       // when animation ends reset states 
-      onAnimationEnd={() => { setEffect(false); setBtnText("Add to Cart") }}
+      onAnimationEnd={() => { setEffect(false); setBtnText("Buy") }}
     >
       {/* cart icon and button text */}
       <span className={"px-3.5 py-3 text-white flex  bg-purple-600 "}>
-        <HiOutlineShoppingBag className="text-xl hover:text-gray-800" />
+        <HiOutlineShoppingBag className="text-xl hover:text-teal-600" />
       </span>
-      <span className="w-full text-md items-center align-middle pl-4 pr-5">{btnText}</span>
+      <span className="w-full text-sm items-center align-middle tracking-wide px-1">{btnText}</span>
     </button>
   );
 };

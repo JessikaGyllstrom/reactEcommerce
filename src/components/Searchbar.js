@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { AiOutlineSearch } from "react-icons/ai";
+// import { AiOutlineSearch } from "react-icons/ai";
 import { SearchContext } from "../contexts/SearchContext";
 import {useNavigate} from 'react-router-dom';
 
@@ -27,21 +27,23 @@ const SearchBar = () => {
 
   return (
     <div className='flex items-center justify-center'>
-      <form className='flex border-2 rounded-2xl'>
-        <input
-          placeholder="Search product..."
-          type="text"
-          onChange={(e) => setSearchQuery(e.target.value)}
-          value={searchQuery}
-          className='px-3 rounded-l-xl text-sm bg-white focus:outline-none  placeholder:text-sm'
-        />
-        <button
-          onClick={searchQueryHandler}
-          className='flex items-center justify-center px-4 border-l rounded-r-xl text-slate-50 text-xl hover:text-purple-600'
-        >
-          <AiOutlineSearch />
-        </button>
-      </form>
+      <form className='flex'
+        onSubmit={searchQueryHandler}
+      >
+        <div class="relative bg-transparent">
+          <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+            <svg className="w-4 h-4 text-teal-50" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            </svg>
+          </div>
+          <input
+            type="text"
+            onChange={(e) => setSearchQuery(e.target.value)}
+            value={searchQuery}
+            className="block w-4 py-2 pl-10 text-sm text-gray-100 rounded-full bg-transparent outline outline-1 outline-transparent focus:w-full focus:outline-teal-50" placeholder="Find product..." required
+          />
+        </div>
+      </form>      
     </div>
   );
 };

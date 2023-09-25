@@ -27,7 +27,7 @@ const ProductPage = () => {
             <div className="flex items-center justify-between mt-3">
               <div className="font-xl font-semibold">$ {price}</div>
               <div className="w-[50%] items-end">
-                <Button className="" product={product} id={id} />
+                <Button product={product} id={product.id} />
               </div>
             </div>
           </div>          
