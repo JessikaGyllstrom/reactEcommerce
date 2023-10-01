@@ -9,7 +9,7 @@ const CartItem = ({ item }) => {
   const { id, title, image, price, quantity } = item;
 
   return (
-    <div className="w-full flex items-center gap-x-5 px-5 mt-3">
+    <div className="w-full flex items-center rounded-md gap-x-5 p-5 mt-3 bg-white">
       {/* product image and title */}
       <div>
         <img className="max-w-[80px]" src={image} alt={title} />

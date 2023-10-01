@@ -9,11 +9,11 @@ const ProductItem = ({ product }) => {
   const { id, image, title, price, category, rating } = product;
 
   return (
-    <div className="flex flex-col bg-white shadow-md rounded-xl p-3  duration-500 hover:scale-103 hover:shadow-xl">
+    <div className="flex flex-col bg-white shadow-md rounded-xl p-3 duration-500 hover:scale-103 hover:shadow-xl">
       <AddWish id={id} product={product}/>
       {/* link to product */}
       <div className="flex w-full justify-center">
-        <Link to={`/product/${id}`}><img src={image} alt={title} className="h-48 pr-5 object-contain group-hover:scale-110 transition duration-300"/></Link>
+        <Link to={`/product/${id}`}><img src={image} alt={title} className="h-48 p-3 object-contain group-hover:scale-110 transition duration-300"/></Link>
       </div>
       <div className="flex h-full flex-col p-2">
         {/* link to category */}

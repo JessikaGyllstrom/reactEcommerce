@@ -10,18 +10,19 @@ import CategoryItems from './pages/CategoryItems';
 import SignIn from './components/SignIn';
 
 function App() {
+
   return (
     <BrowserRouter>
-      <Navbar/>
-        <Routes>
-          <Route path="/" element={< Shop />}/>
-          <Route path="/product/:id" element={<ProductPage />}/>
-          <Route path="/categoryItems/:categoryId" element={<CategoryItems />}/>
-          <Route path="/searchRes/" element={<SearchRes />} />
-          <Route path="/sign-in" element={<SignIn />} />
-        </Routes>
-      <Cart/>
-      <Footer/>
+      <Navbar />
+          <Routes>
+            <Route path="/" element={< Shop />}/>
+            <Route path="/product/:id" element={<ProductPage />}/>
+            <Route path="/categoryItems/:categoryId" element={<CategoryItems />}/>
+            <Route path="/searchRes/" element={<SearchRes />} />
+            <Route path="/sign-in" element={<SignIn />} />
+          </Routes>
+        <Cart/>
+        <Footer/>
     </BrowserRouter>
   );
 }

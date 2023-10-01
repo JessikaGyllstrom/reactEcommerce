@@ -1,31 +1,22 @@
 import { createContext, useState, useEffect } from "react";
 
+//initial state
 export const AuthContext = createContext({});
 
 const AuthProvider = ({ children }) => {
-  const [auth, setAuth] = useState({ loading: true, data: null });
+  const [auth, setAuth] = useState({  userName: "" });
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const setAuthData = (data) => {
-    setAuth({
-      data: data
-    });
-  };
-
-  useEffect(() => {
-    setAuth({ loading: false, data: JSON.parse(window.localStorage.getItem('authData'))});
-  }, []);
-//2. if object with key 'authData' exists in localStorage, we are putting its value in auth.data and we set loading to false. 
-//This function will be executed every time component is mounted (every time the user refresh the page);
 
   // when changes to authdata add to localstorage
   useEffect(() => {
-    window.localStorage.setItem('authData', JSON.stringify(auth.data));
-    console.log("passing data to local storage"+ auth.data)
-  }, [auth.data]);
-// 1. when **auth.data** changes we are setting **auth.data** in localStorage with the key 'authData'.
+    window.localStorage.setItem('authData', JSON.stringify(auth));
+    console.log("Passing data to local storage"+ auth)
+  }, [auth]);
+  // when auth changes sett auth data in localStorage
 
   return (
-    <AuthContext.Provider value={{ auth, setAuthData }}>
+    <AuthContext.Provider value={{ auth, setAuth, isLoggedIn, setIsLoggedIn }}>
       {children}
     </AuthContext.Provider>
   );

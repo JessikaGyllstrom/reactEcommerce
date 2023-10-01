@@ -5,18 +5,19 @@ import  { AuthContext } from '../contexts/AuthContext';
 
 function DropDown(data) {
   const [isOpen, setIsOpen] = useState(false); 
-  const { auth, setAuthData } = useContext(AuthContext);
+  const { auth, setAuth, setIsLoggedIn } = useContext(AuthContext);
   
   const logOut = () => {
-    setAuthData(null);
-  } //clearing the context
-  // console.log(auth)
+    //clearing the context
+    setAuth(null);
+    setIsLoggedIn(false)
+  }
 
   return (
     <div className="relative inline-block ">
       <button onClick={() => (setIsOpen(!isOpen))}
         className="relative z-10 flex items-center p-2 text-sm text-gray-600 border border-transparent rounded-md focus:border-purple-600 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-cyan-600 dark:focus:ring-blue-400 focus:ring dark:text-white focus:outline-none">
-        <span className="mx-0.2 text-lg"><FaUserCircle className='text-teal-50 mr-1 text-xl' /></span><p>{auth.data}</p>
+        <span className="mx-0.2 text-lg"><FaUserCircle className='text-teal-50 mr-1 text-xl' /></span><p>{auth}</p>
         <svg className="w-5 h-5 mx-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 15.713L18.01 9.70299L16.597 8.28799L12 12.888L7.40399 8.28799L5.98999 9.70199L12 15.713Z" fill="currentColor"></path>
         </svg>

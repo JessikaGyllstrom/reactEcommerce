@@ -12,18 +12,18 @@ import WishListProvider from './contexts/WishListContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ToggleProvider>
-      <WishListProvider>
-        <CartProvider>
-          <ProductProvider>
-            <AuthProvider>
-              <SearchContextProvider>
-                <App />
-              </SearchContextProvider>
-            </AuthProvider>
-          </ProductProvider>
-        </CartProvider>
-      </WishListProvider>
-    </ToggleProvider>
+    <AuthProvider>
+      <ToggleProvider>
+        <WishListProvider>
+          <CartProvider>
+            <ProductProvider>
+                <SearchContextProvider>
+                  <App />
+                </SearchContextProvider>
+            </ProductProvider>
+          </CartProvider>
+        </WishListProvider>
+      </ToggleProvider>
+    </AuthProvider>
   </React.StrictMode>
 );

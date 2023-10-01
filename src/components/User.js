@@ -12,7 +12,7 @@ const User = () => {
     <div>
       <div className="flex items-center text-slate-50">
         <div className="flex flex-col">
-          <DropDown props={auth.data} />
+          <DropDown props={auth} />
         </div>
       </div>
     </div>

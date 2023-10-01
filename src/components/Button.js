@@ -20,10 +20,10 @@ const Button = ({ product, id }) => {
         //start animation
         setEffect(true);
         //set button text to unicode character checkmark
-        setBtnText("\u2713")
+        setBtnText("Added! \u2713")
       }}
       // when animation ends reset states 
-      onAnimationEnd={() => { setEffect(false); setBtnText("Buy") }}
+      onAnimationEnd={() => { setEffect(false); setBtnText("Buy Now") }}
     >
       {/* cart icon and button text */}
       <span className={"px-3.5 py-3 text-white flex  bg-purple-600 "}>

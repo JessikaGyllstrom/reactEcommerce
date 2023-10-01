@@ -4,14 +4,19 @@ export const ToggleContext = createContext();
 
 const ToggleProvider = ({children}) => {
   const [isOpen, setIsOpen] = useState(false);
-  console.log('toggle provider')
+  const [showModal, setShowModal] = useState(false);
+  const [showWelcome, setshowWelcome] = useState(false);
 
+  console.log(setshowWelcome)
   const toggleClose = () => {
     setIsOpen(false)
-    console.log('set "is open" to false')
   }
                           
-  return <ToggleContext.Provider value={{isOpen, setIsOpen, toggleClose}}>{children}</ToggleContext.Provider>;
+  return (
+    <ToggleContext.Provider value={{ isOpen, setIsOpen, toggleClose, showModal, setShowModal, showWelcome, setshowWelcome }}>
+      {children}
+    </ToggleContext.Provider>
+  )
 };
 
 export default ToggleProvider;

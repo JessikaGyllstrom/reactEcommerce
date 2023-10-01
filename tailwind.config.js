@@ -1,17 +1,27 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}"
   ],
   theme: {
     extend: {
       keyframes: {
+        wiggle: {
+          '0%': { opacity: '0', scale: '0.4' },
+          '100%': { opacity: '1', scale: '1' }
+        },
+        flow: {
+          '0%, 100%': { scale: '1', opacity: '0.8', transform: 'rotate(1deg)' },
+          '50%': { scale: '1.05', opacity: '1', transform: 'rotate(-3deg)' }
+        },
         bgAnimate: {
           '0%, 100%': { backgroundColor: '#56a687' }, 
-        }
+        },
       },
       animation: {
-        bgAnimate: "bgAnimate 1.5s ease-in-out"
+        wiggle: "wiggle 2s ease-in", 
+        flow: "flow 5s ease-in-out infinite", 
+        bgAnimate: "bgAnimate 1.5s ease-in-out", 
       },
       colors: {
         petrol: {

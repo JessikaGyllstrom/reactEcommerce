@@ -14,7 +14,7 @@ const SearchResult = () => {
   const searchMatch = searchHits.length;
 
   return (
-    <div className="container mx-auto h-screen">
+    <div className="container mx-auto h-[100vh] mt-28">
       <div className="flex w-full flex-col">
         {searchMatch === 1
           ? <h1 className="flex mx-auto justify-center font-semibold tracking-wide text-xl text-light-50 mb-3">Searchresult: {searchMatch}</h1>
