@@ -10,15 +10,14 @@ const AddWish = ({id, product}) => {
   return (
     <div className='flex w-full justify-end pr-1 pt-1'>
       <BsSuitHeartFill
-        className={`text-lg ${check ? 'text-teal-50' : 'text-purple-600'}`}
+        className={`text-lg cursor-pointer md:text-xl hover:text-teal-50 ${check ? 'text-teal-50' : 'text-purple-600'}`}
         onClick={() => {
           setCheck(prevCheck => !prevCheck);
           addWish(product, id);
           if (check) {
             removeItem(id)
           }
-        }
-      }
+        }}
       />
     </div>
   );

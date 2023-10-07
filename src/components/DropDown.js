@@ -10,7 +10,8 @@ function DropDown(data) {
   const logOut = () => {
     //clearing the context
     setAuth(null);
-    setIsLoggedIn(false)
+    setIsLoggedIn(false);
+    window.location.replace("/#shop");
   }
 
   return (

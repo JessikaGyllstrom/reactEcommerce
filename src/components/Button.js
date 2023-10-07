@@ -5,6 +5,7 @@ import { HiOutlineShoppingBag } from "react-icons/hi";
 
 // add to cart button
 const Button = ({ product, id }) => {
+
   const { addToCart } = useContext(CartContext);
   // state to toggle button text
   const [btnText, setBtnText] = useState("Buy Now");
@@ -14,7 +15,7 @@ const Button = ({ product, id }) => {
   return (
     <button
       className={`${effect && "animate-bgAnimate"} 
-      inline-flex items-center min-w-[100%] overflow-hidden text-white bg-gray-800 group border border-white rounded-md hover:border-purple-800`}
+      inline-flex items-center min-w-[100%] overflow-hidden text-white bg-gray-800 group border border-white rounded-md hover:bg-gray-700 transition duration-300 ease-in-out`}
       onClick={() => {
         addToCart(product, id)
         //start animation
@@ -29,7 +30,7 @@ const Button = ({ product, id }) => {
       <span className={"px-3.5 py-3 text-white flex  bg-purple-600 "}>
         <HiOutlineShoppingBag className="text-xl hover:text-teal-600" />
       </span>
-      <span className="w-full text-sm items-center align-middle tracking-wide px-1">{btnText}</span>
+      <span className="w-full text-sm items-center align-middle tracking-wide mx-2 font-normal lg:text-md">{btnText}</span>
     </button>
   );
 };

@@ -13,7 +13,7 @@ const AuthProvider = ({ children }) => {
     window.localStorage.setItem('authData', JSON.stringify(auth));
     console.log("Passing data to local storage"+ auth)
   }, [auth]);
-  // when auth changes sett auth data in localStorage
+  // when auth changes set auth data in localStorage
 
   return (
     <AuthContext.Provider value={{ auth, setAuth, isLoggedIn, setIsLoggedIn }}>

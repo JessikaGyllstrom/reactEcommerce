@@ -13,13 +13,13 @@ export default function Footer() {
     <footer className=" bg-gray-800 text-center mt-16 border-t border-gray-700 text-slate-300">
       <div className="flex items-center justify-center border-b bg-petrol-800/20 border-gray-700 p-6 lg:justify-between">
         <div className="flex w-full justify-center">
-          <div className='w-[35%]'>
+          <div className='w-[90%] md:w-[35%]'>
             <div className='flex justify-center'>
               {/* social icons */}
-              <AiFillInstagram className='text-2xl mx-4 hover:text-purple-600 transition duration-300 ease-in-out'/>
-              <BiLogoLinkedinSquare className='text-2xl mx-4 hover:text-purple-600 transition duration-300 ease-in-out'/>
-              <BsFacebook className='text-2xl mx-4  hover:text-purple-600 transition duration-300 ease-in-out'/>
-              <FaTwitter className='text-2xl mx-4  hover:text-purple-600 transition duration-300 ease-in-out'/>
+              <AiFillInstagram className='text-2xl mx-4 cursor-pointer hover:text-purple-600 transition duration-300 ease-in-out'/>
+              <BiLogoLinkedinSquare className='text-2xl mx-4 cursor-pointer hover:text-purple-600 transition duration-300 ease-in-out'/>
+              <BsFacebook className='text-2xl mx-4 cursor-pointer hover:text-purple-600 transition duration-300 ease-in-out'/>
+              <FaTwitter className='text-2xl mx-4 cursor-pointer hover:text-purple-600 transition duration-300 ease-in-out'/>
             </div>
           </div>
         </div>
@@ -54,26 +54,24 @@ export default function Footer() {
               History 
               </p>
             </div>
-            
             <div>
               <h6
-                class="mb-4 text-teal-50 flex justify-center font-semibold uppercase md:justify-start">
+                className="mb-4 text-teal-50 flex justify-center font-semibold uppercase md:justify-start">
                 Useful links
               </h6>
-              <p class="mb-4">
+              <p className="mb-4">
                 Pricing 
               </p>
-              <p class="mb-4">
+              <p className="mb-4">
                 FAQs
               </p>
-              <p class="mb-4">
+              <p className="mb-4">
                 Support
               </p>
               <p>
                 Live Chat
               </p>
             </div>
-            
             <div>
               <h6
                 className="text-teal-50 mb-4 flex justify-center font-semibold uppercase md:justify-start">
@@ -83,11 +81,11 @@ export default function Footer() {
                 <AiOutlineHome className='text-teal-50 mr-1'/>
                   New York, NY 87611, US
               </p>
-              <p class="mb-4 flex items-center justify-center md:justify-start">
+              <p className="mb-4 flex items-center justify-center md:justify-start">
                 <HiOutlineMail className='text-teal-50 mr-1'/>
                 shoptopia@support.com
               </p>
-              <p class="mb-4 flex items-center justify-center md:justify-start">
+              <p className="mb-4 flex items-center justify-center md:justify-start">
                 <BsTelephone className='text-teal-50 mr-1'/>
                 + 01 234 567 88
               </p>

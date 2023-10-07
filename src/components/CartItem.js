@@ -4,6 +4,7 @@ import { AiOutlineMinus } from "react-icons/ai"
 import { CartContext } from "../contexts/CartContext";
 
 const CartItem = ({ item }) => {
+  
   const { reduceQuantity, increaseQuantity, removeItem } = useContext(CartContext);
   // destructure item
   const { id, title, image, price, quantity } = item;

@@ -3,11 +3,10 @@ import React, { createContext, useEffect, useState } from "react";
 export const WishListContext = createContext();
 
 const WishListProvider = ({ children }) => {
-  // cart state
+  // wishlist state
   const [wishList, setwishList] = useState([]);
-  // item quantity state
+  // wishlist count state
   const [count, setcount] = useState(0);
-  // subtotal state
 
   // update count
   useEffect(() => {
@@ -25,30 +24,29 @@ const WishListProvider = ({ children }) => {
   const addWish = (product, id) => {
     console.log(wishList)
     const newItem = { ...product, count: 1 };
-    // check if the item is already in the cart
+    // check if the item is already in the wishlist
     const wishItem = wishList.find((item) => {
       return item.id === id;
     });
-      // if cartitem returns true
+      // if 
     if (wishItem) {
-      // create new cart with data from current cart 
+      // create new wishlist with data from current list 
       const newWish = [...wishList].map((item) => {
         // if product is already in cart
         if (item.id === id) {
-          // return product and raise its quantity by 1
+          // return item and raise its quantity by 1
           return { ...item, quantity: wishItem.count + 1 };
-          // if product isnt already in cart return product
+          // if item isnt already in cart return product
         } else return item;
       });
-      // set cart state with the new cart
+      // set wishlist state with the new wish
       setwishList(newWish);
-      // if product isnt already in cart
+      // if wish isnt already in wishlist
     } else {
-      // update cart state with the new item
+      // update wishlist state with the new wish
       setwishList([...wishList, newItem]);
     }
   };
-
 
   // remove item
   const removeItem = (id) => {

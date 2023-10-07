@@ -25,16 +25,16 @@ const ProductItem = ({ product }) => {
           <StarRating rating={rating.rate} />
         </div>
         {/* link to product */}
-        <div className="h-full  mb-2">
+        <div className="h-full mb-2 font-medium md:text-md">
           <Link to={`/product/${id}`}>{title}</Link>
         </div>
         <div className="flex justify-between text-md font-medium items-center rounded-sm">
           {/* price */}
-          <div className="flex items-center">
-            <span className="text-lg">$</span><p className="text-lg">{price}</p>
+          <div className="flex items-center font-medium">
+            <span className="text-md md:text-lg mr-[0.1rem]">$</span><p className="text-md md:text-lg">{price}</p>
           </div>
           {/* buy now button */}
-          <div className="w-[60%]"> 
+          <div className="w-[65%] cursor-pointer"> 
             <Button product={product} id={id} />
           </div>
         </div>

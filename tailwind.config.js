@@ -11,17 +11,27 @@ module.exports = {
           '100%': { opacity: '1', scale: '1' }
         },
         flow: {
-          '0%, 100%': { scale: '1', opacity: '0.8', transform: 'rotate(1deg)' },
-          '50%': { scale: '1.05', opacity: '1', transform: 'rotate(-3deg)' }
+          '0%, 100%': { scale: '1', opacity: '0.8', transform: 'rotate(3deg)' },
+          '50%': { scale: '1.2', opacity: '1', transform: 'rotate(-3deg)' }
         },
         bgAnimate: {
-          '0%, 100%': { backgroundColor: '#56a687' }, 
+          '0%, 100%': { backgroundColor: '#2cbdb2', color: 'black' }, 
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' }
+        },
+        smoothInX: {
+          '0%': { transform: 'translateX(30%)' },
+          '100%': { transform: 'translateX(0)' },
         },
       },
       animation: {
         wiggle: "wiggle 2s ease-in", 
         flow: "flow 5s ease-in-out infinite", 
         bgAnimate: "bgAnimate 1.5s ease-in-out", 
+        fadeIn: "fadeIn 2.8s ease", 
+        smoothInX: "smoothInX 1s ease-in-out", 
       },
       colors: {
         petrol: {
